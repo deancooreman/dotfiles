@@ -55,4 +55,13 @@ return {
       })
     end,
   },
+
+  -- Markdown preview
+  {
+    "iamcco/markdown-preview.nvim",
+    ft = { "markdown" },
+    build = "cd app && npm install",
+    init = function() vim.g.mkdp_filetypes = { "markdown" } end,
+    keys = { { "<leader>mp", ":MarkdownPreviewToggle<CR>", desc = "Markdown preview" } },
+  },
 }
