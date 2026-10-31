@@ -17,5 +17,5 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Plugins
 require("lazy").setup({
-  "tpope/vim-fugitive",
+  { "NeogitOrg/neogit", dependencies = { "nvim-lua/plenary.nvim" } },
 })
